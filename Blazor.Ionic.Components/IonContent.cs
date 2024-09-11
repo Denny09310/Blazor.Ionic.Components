@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.JSInterop;
 
-namespace Blazor.Ionic;
+namespace Blazor.Ionic.Components;
 
 public partial class IonContent : IonComponentBase, IAsyncDisposable
 {
@@ -17,7 +17,7 @@ public partial class IonContent : IonComponentBase, IAsyncDisposable
     public string? Color { get; set; }
 
     [Parameter]
-    public string FixedSlotPlacement { get; set; } = "after";
+    public string? FixedSlotPlacement { get; set; }
 
     [Parameter]
     public bool? ForceOverscroll { get; set; }
@@ -103,7 +103,7 @@ public partial class IonContent : IonComponentBase, IAsyncDisposable
 
         builder.AddContent(i++, ChildContent);
 
-        builder.AddElementReferenceCapture(i, element => this.Element = element);
+        builder.AddElementReferenceCapture(i, element => Element = element);
 
         builder.CloseComponent();
 
