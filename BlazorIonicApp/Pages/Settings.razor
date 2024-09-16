@@ -15,5 +15,13 @@
         </IonToolbar>
     </IonHeader>
 
+    <IonButton @onclick="() => IsOpen = true">Open Action Sheet</IonButton>
+    <IonActionSheet IsOpen="IsOpen" OnDidDismiss="() => IsOpen = false" />
+
     <div style="height: 100svh;"></div>
 </IonContent>
+
+@code
+{
+    private bool IsOpen { get; set; }
+}
