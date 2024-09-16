@@ -3,22 +3,18 @@ using Microsoft.AspNetCore.Components.Rendering;
 
 namespace Blazor.Ionic.Components;
 
-public partial class IonTitle : IonComponentBase
+public partial class IonPage : IonComponentBase
 {
     [Parameter]
-    public string? Color { get; set; }
-
-    [Parameter]
-    public string? Size { get; set; }
+    public string? Class { get; set; }
 
     protected override void BuildRenderTree(RenderTreeBuilder builder)
     {
         int i = 0;
 
-        builder.OpenElement(i++, "ion-title");
+        builder.OpenElement(i++, "ion-page");
 
-        builder.AddAttribute(i++, "color", Color);
-        builder.AddAttribute(i++, "size", Size);
+        builder.AddAttribute(i++, "class", $"ion-page {Class}");
 
         builder.AddMultipleAttributes(i++, AdditionalAttributes);
 

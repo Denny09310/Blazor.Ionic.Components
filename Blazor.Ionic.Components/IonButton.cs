@@ -6,14 +6,8 @@ namespace Blazor.Ionic.Components;
 
 public partial class IonButton : IonComponentBase, IAsyncDisposable
 {
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
-
     [Parameter]
     public string? ButtonType { get; set; }
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
 
     [Parameter]
     public string? Color { get; set; }
@@ -113,13 +107,13 @@ public partial class IonButton : IonComponentBase, IAsyncDisposable
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        await base.OnAfterRenderAsync(firstRender);
+     
         if (firstRender)
         {
             await AddEventListenerAsync(IonFocus, "ionFocus", HandleFocus);
             await AddEventListenerAsync(IonBlur, "ionBlur", HandleBlur);
         }
-
-        await base.OnAfterRenderAsync(firstRender);
     }
 
     #region Element Events

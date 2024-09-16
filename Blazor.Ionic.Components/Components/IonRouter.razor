@@ -1,0 +1,41 @@
+@namespace Blazor.Ionic.Components
+
+<Router AppAssembly="@AppAssembly" AdditionalAssemblies="@AdditionalAssemblies" NotFound="@NotFound" OnNavigateAsync="OnNavigateAsync">
+    <Found Context="routeData">
+        <LayoutView Layout="@DefaultLayout">
+            <TransitionableRoutePrimary RouteData="@routeData" ForgetStateOnTransition="@ForgetStateOnTransition">
+                <TransitionableRouteView DefaultLayout="@typeof(IonTransitionableRoute)" />
+            </TransitionableRoutePrimary>
+            <TransitionableRouteSecondary RouteData="@routeData" ForgetStateOnTransition="@ForgetStateOnTransition">
+                <TransitionableRouteView DefaultLayout="@typeof(IonTransitionableRoute)" />
+            </TransitionableRouteSecondary>
+        </LayoutView>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+</Router>
+
+@code
+{
+    [Parameter]
+    [EditorRequired]
+    public Assembly AppAssembly { get; set; } = default!;
+
+    [Parameter]
+    public IEnumerable<Assembly>? AdditionalAssemblies { get; set; }
+
+    [Parameter]
+    public RenderFragment NotFound { get; set; } = default!;
+
+    [Parameter] 
+    public RenderFragment? Navigating { get; set; }
+
+    [Parameter] 
+    public EventCallback<NavigationContext> OnNavigateAsync { get; set; }
+
+    [Parameter]
+    [EditorRequired]
+    public Type DefaultLayout { get; set; } = default!;
+
+    [Parameter]
+    public bool ForgetStateOnTransition { get; set; } = true;
+}

@@ -5,12 +5,6 @@ namespace Blazor.Ionic.Components;
 
 public partial class IonHeader : IonComponentBase
 {
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-
     [Parameter]
     public string? Collapse { get; set; }
 

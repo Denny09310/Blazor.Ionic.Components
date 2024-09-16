@@ -5,12 +5,6 @@ namespace Blazor.Ionic.Components;
 
 public partial class IonText : IonComponentBase
 {
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-
     [Parameter]
     public string? Color { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace Blazor.Ionic.Components.Events;
 
-public class ScrollCustomEvent : DotNetEventListener, IScrollBaseCustomEvent
+public class ScrollCustomEvent : JSEvent, IScrollBaseCustomEvent
 {
     public ScrollDetail Detail { get; set; } = default!;
 

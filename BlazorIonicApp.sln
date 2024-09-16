@@ -5,8 +5,6 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorIonicApp", "BlazorIonicApp\BlazorIonicApp.csproj", "{6157BDC8-2B0C-4884-A02C-1CD19D7098F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Javascript.Interop.Extensions", "..\..\github\Blazor.Javascript.Interop\Blazor.Javascript.Interop.Extensions\Blazor.Javascript.Interop.Extensions.csproj", "{07F8CF3E-E8E2-4775-8F21-1489A1FC4B8F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Ionic.Components", "Blazor.Ionic.Components\Blazor.Ionic.Components.csproj", "{4761243C-5CC0-43C4-8841-D4B4DD2DDDDE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C5CF5F9-1F94-4DF7-B210-A1BA8C6163B5}"
@@ -24,10 +22,6 @@ Global
 		{6157BDC8-2B0C-4884-A02C-1CD19D7098F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6157BDC8-2B0C-4884-A02C-1CD19D7098F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6157BDC8-2B0C-4884-A02C-1CD19D7098F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07F8CF3E-E8E2-4775-8F21-1489A1FC4B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07F8CF3E-E8E2-4775-8F21-1489A1FC4B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07F8CF3E-E8E2-4775-8F21-1489A1FC4B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07F8CF3E-E8E2-4775-8F21-1489A1FC4B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4761243C-5CC0-43C4-8841-D4B4DD2DDDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4761243C-5CC0-43C4-8841-D4B4DD2DDDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4761243C-5CC0-43C4-8841-D4B4DD2DDDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU

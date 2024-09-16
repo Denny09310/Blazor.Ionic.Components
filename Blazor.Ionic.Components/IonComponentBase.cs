@@ -5,6 +5,12 @@ namespace Blazor.Ionic;
 
 public abstract class IonComponentBase : ComponentBase
 {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
     protected ElementReference Element { get; set; }
 
     protected static string? ToAttribute<T>(T value)

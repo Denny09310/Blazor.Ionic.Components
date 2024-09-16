@@ -7,12 +7,6 @@ namespace Blazor.Ionic.Components;
 
 public partial class IonContent : IonComponentBase, IAsyncDisposable
 {
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> AdditionalParameters { get; set; } = [];
-
-    [Parameter]
-    public RenderFragment? ChildContent { get; set; }
-
     [Parameter]
     public string? Color { get; set; }
 
@@ -99,7 +93,7 @@ public partial class IonContent : IonComponentBase, IAsyncDisposable
         builder.AddAttribute(i++, "scroll-x", ToAttribute(ScrollX));
         builder.AddAttribute(i++, "scroll-y", ToAttribute(ScrollY));
 
-        builder.AddMultipleAttributes(i++, AdditionalParameters);
+        builder.AddMultipleAttributes(i++, AdditionalAttributes);
 
         builder.AddContent(i++, ChildContent);
 
